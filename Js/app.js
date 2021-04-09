@@ -1,7 +1,7 @@
 // alert("connected")
 
-const zero = document.querySelector("#zero");
-const one = document.querySelector("#one"),
+const zero = document.querySelector("#zero"),
+     one = document.querySelector("#one"),
     two = document.querySelector("#two"),
     three = document.querySelector("#three"),
     four = document.querySelector("#four"),
@@ -21,11 +21,11 @@ const one = document.querySelector("#one"),
     
 
 let question = "",
-    answer = 0
+    answer = 0;
 
-qDisplay = document.querySelector("#display-question");
-aDisplay = document.querySelector("#display-answer");
-eDisplay = document.querySelector("#display-error");
+const qDisplay = document.querySelector("#display-question"),
+        aDisplay = document.querySelector("#display-answer"),
+        eDisplay = document.querySelector("#display-error");
 
 
 
@@ -142,33 +142,19 @@ add.addEventListener("click", () => {
     }
 
 
-    // if (question[question.length - 1] !==  "+") {
+    if (question[question.length - 1] !==  "+") {
 
-    //      if (question.length <= 16) {
-    //         question = question.concat("+");
-    //     }
-    //     else if (question.length > 16) {
-    //         displayError("input limit reached");
-    //     }   
-    // }
-    // console.log(parseInt(question[question.length - 1]), parseInt(question[question.length - 1]));
-    const prev = Number(question[question.length - 1]);
-    console.log(prev);
-
-    if (-1 < prev <10  ) {
          if (question.length <= 16) {
             question = question.concat("+");
         }
         else if (question.length > 16) {
             displayError("input limit reached");
         }   
-    }
-
-    
-    
+    }   
     
     
 });
+
 subtract.addEventListener("click", () => {
     if (question === "") {
         question = answer.toString().concat("-");
@@ -230,6 +216,8 @@ clear.addEventListener("click", ()=>{
     
 })
 
+// allows the question to be displayed in DOM consistently
+
 setInterval(() => {
     qDisplay.textContent = question;
 
@@ -264,6 +252,6 @@ function displayError(err) {
         eDisplay.textContent = "";
         
         
-    }, 1500);
+    }, 2000);
     
 }

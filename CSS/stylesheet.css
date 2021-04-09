@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+
 *{
     padding : 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
-    /* background-color: brown; */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
     /* color: rgb(30, 113, 223); */
 }
 
@@ -36,6 +39,7 @@ body{
     width: 30vw;
     min-width: 360px;
     /* background-color: chartreuse; */
+    background-color: brown;
     justify-content: space-between;
     /* border: 5px solid rgb(33, 127, 250); */
     /* border-radius: 10px; */
